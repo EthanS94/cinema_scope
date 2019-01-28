@@ -10,17 +10,14 @@ case $TRAVIS_OS_NAME in
         . $TRAVIS_BUILD_DIR/travis/build_installer.sh
         ;;
     osx)
-        if [["$osx_image" == "xcode10"]]; then
-            qmake -spec macx-xcode cinema_scope.pro
-            xcodebuild -project cinema_scope.xcodeproj
-            qmake -spec macx-xcode cinema_scope_test.pro
-            xcodebuild -project cinema_scope_test.xcodeproj
-        else
-            qmake cinema_scope.pro
-            make
-            qmake cinema_scope_test.pro
-            make
-        fi
+        qmake -spec macx-xcode cinema_scope.pro
+        xcodebuild -project cinema_scope.xcodeproj
+        qmake -spec macx-xcode cinema_scope_test.pro
+        xcodebuild -project cinema_scope_test.xcodeproj
+        qmake cinema_scope.pro
+        make
+        qmake cinema_scope_test.pro
+        make
         . $TRAVIS_BUILD_DIR/travis/build_installer.sh
         ;;
     windows)
