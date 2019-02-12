@@ -4,9 +4,9 @@ set -e
 case $TRAVIS_OS_NAME in
     linux)
         echo "*******"
-        ls $TRAVIS_BUILD_DIR/build
+        ls $TRAVIS_BUILD_DIR/build/debug
         echo "*******"
-        find $TRAVIS_BUILD_DIR/build/debug -name "*test*"
+        find $TRAVIS_BUILD_DIR/build/debug -type f
         ;;
     osx)
         ;;
