@@ -6,7 +6,7 @@ case $TRAVIS_OS_NAME in
         echo "*******"
         ls $TRAVIS_BUILD_DIR/build/debug
         echo "*******"
-        find $TRAVIS_BUILD_DIR/build/debug -type f
+        find $TRAVIS_BUILD_DIR/build -type f
         ;;
     osx)
         ;;
