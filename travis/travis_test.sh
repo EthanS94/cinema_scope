@@ -16,7 +16,7 @@ case $TRAVIS_OS_NAME in
         ;;
     windows)
         cd $TRAVIS_BUILD_DIR/src
-        cmd "/C $(find . -name "cinema_scope_test" -print -quit)"
+        $(find . -name "cinema_scope_test" -quit)
         cd $TRAVIS_BUILD_DIR
         ;;
 esac
