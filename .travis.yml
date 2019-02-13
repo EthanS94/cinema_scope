@@ -90,7 +90,7 @@ install:
 script:
   - . $TRAVIS_BUILD_DIR/travis/travis_script.sh
   - cd $TRAVIS_BUILD_DIR/src
-  - $(find . -name "cinema_scope_test")
+  - find . -name "cinema_scope_test" -exec {} \;
   - . $TRAVIS_BUILD_DIR/travis/travis_test.sh 
 
 # OPTIONAL - Cleaning up the cache
