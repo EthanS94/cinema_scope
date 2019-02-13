@@ -7,5 +7,6 @@ case $TRAVIS_OS_NAME in
     osx)
         ;;
     windows)
+        find . -name 'doxyfile.cfg'
         ;;
 esac
