@@ -10,9 +10,7 @@ stages:
   name:
     - before_deploy
     - deploy
-    if: 
-      - os = osx
-      - osx_image != "xcode10"
+    if: osx_image != "xcode10"
 
 # Notification settings
 notifications:
