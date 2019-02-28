@@ -14,8 +14,11 @@ case $TRAVIS_OS_NAME in
           git commit -am "Updating doxygen"
           git subtree split --prefix docs -b gh-pages-new
           git checkout gh-pages
-          git merge gh-pages-new
-          git push "https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}" HEAD:gh-pages
+          if git cherry-pick gh-pages-new; then
+            git push "https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}" HEAD:gh-pages
+          else
+            echo "No changes to doxygen"
+          fi
         fi
         ;;
     windows)
