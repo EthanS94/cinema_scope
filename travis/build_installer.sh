@@ -14,7 +14,7 @@ case $TRAVIS_OS_NAME in
         fi
         ;;
     osx)
-        cp -rf $TRAVIS_BUILD_DIR/build/release/cinema_scope $TRAVIS_BUILD_DIR/installer/packages/data
+        cp -rf $TRAVIS_BUILD_DIR/build/release/cinema_scope.app $TRAVIS_BUILD_DIR/installer/packages/data
         binarycreator -c $TRAVIS_BUILD_DIR/installer/config/config.xml -p $TRAVIS_BUILD_DIR/installer/packages cinema_scope_installer
         if [ -e cinema_scope_installer ]
         then
