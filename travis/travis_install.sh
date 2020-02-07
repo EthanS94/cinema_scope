@@ -27,7 +27,7 @@ case $TRAVIS_OS_NAME in
         ./qt_installer.exe --script $TRAVIS_BUILD_DIR/travis/navigate_qt_installer_windows.qs
         # Add Mingw and qt to path
         export MWDIR="/c/Users/travis/Qt/Tools/mingw730_64"
-        export QTDIR="/c/Users/travis/Qt/5.12.0/mingw73_64"
+        export QTDIR="/c/Users/travis/Qt/5.12.2/mingw73_64"
         export QTIFW="/c/Users/travis/Qt/Tools/QtInstallerFramework/${QTIF_Version}"
         export PATH="$MWDIR/bin:$QTDIR/bin:$QTIFW/bin:$PATH"
         ;;
