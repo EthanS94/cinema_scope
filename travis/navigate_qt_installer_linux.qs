@@ -36,7 +36,7 @@ Controller.prototype.TargetDirectoryPageCallback = function(){
 Controller.prototype.ComponentSelectionPageCallback = function(){
     var widget = gui.currentPageWidget();
     widget.deselectAll();
-    widget.selectComponent("qt.tools.ifw.30")
+    widget.selectComponent("qt.tools.ifw.32")
     gui.clickButton(buttons.NextButton);
 }
 
