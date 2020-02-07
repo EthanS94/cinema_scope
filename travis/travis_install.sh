@@ -18,6 +18,13 @@ case $TRAVIS_OS_NAME in
         brew update
         brew install qt5
         brew install doxygen
+        wget http://download.qt.io/official_releases/online_installers/qt-unified-mac-x64-online.dmg -q -O qt_installer.dmg
+        chmod +x qt_installer.dmg
+        # Get the Qt Installer Framework Version
+        QTIF_Version=`./qt_installer.run --version | grep "IFW Version" | perl -pe "s|IFW Version.*? (.*?\..*?)\..*?, .*|\1|g"`
+        ./qt_installer.dmg -platform minimal --script $TRAVIS_BUILD_DIR/travis/navigate_qt_installer_mac.qs
+        # Add installer framework to path
+        export PATH="$HOME/Qt/Tools/QtInstallerFramework/${QTIF_Version}/bin:$PATH"
         ;;
     windows)
         # Download and run qt installer
