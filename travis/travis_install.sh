@@ -30,6 +30,5 @@ case $TRAVIS_OS_NAME in
         export QTDIR="/c/Users/travis/Qt/5.12.0/mingw73_64"
         export QTIFW="/c/Users/travis/Qt/Tools/QtInstallerFramework/${QTIF_Version}"
         export PATH="$MWDIR/bin:$QTDIR/bin:$QTIFW/bin:$PATH"
-        which qmake
         ;;
 esac

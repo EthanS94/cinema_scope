@@ -24,12 +24,11 @@ case $TRAVIS_OS_NAME in
         . $TRAVIS_BUILD_DIR/travis/build_installer.sh
         ;;
     windows)
-        which qmake
         which qmake.exe
-        qmake cinema_scope.pro
-        mingw32-make
-        qmake cinema_scope_test.pro
-        mingw32-make
+        qmake.exe cinema_scope.pro
+        mingw32-make.exe
+        qmake.exe cinema_scope_test.pro
+        mingw32-make.exe
         . $TRAVIS_BUILD_DIR/travis/build_installer.sh
         ;;
 esac
