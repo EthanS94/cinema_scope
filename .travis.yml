@@ -91,7 +91,7 @@ script:
 # What to do if success or failure
 # non-zero exit status: build status returns failed but continues running
 after_success:
-  - test $TRAVIS_BRANCH = "master" && bash $TRAVIS_BUILD_DIR/travis/travis_deploy.sh
+  - test $TRAVIS_BRANCH = "master" && bash $TRAVIS_BUILD_DIR/travis/travis_deploy.sh || exit 0
 #after_failure:
 
 # OPTIONAL - Steps before deployement. Runs for each deployement if there are multiple deployements
